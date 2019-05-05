@@ -19,7 +19,7 @@ tagline:
     {{ post.date | date: "%Y" }}
   </span>
 
-  <h2>
+  <h2 class="post-title">
     <a href="{{ site.BASE_PATH }}{{ post.url }}">{{ post.title }}</a>
   </h2>
 
@@ -32,7 +32,7 @@ tagline:
     {% elsif post.description %}
     {{ post.description }}
     {% else %}
-    {{ post.excerpt }}
+    <!-- {{ post.excerpt }} -->
     {% endif %}
     {% endif %}
   </div>

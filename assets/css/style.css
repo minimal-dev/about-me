@@ -83,7 +83,7 @@ article .share .gplus:hover {
 
 .page-header {
 	color: #e74c3c;
-	text-shadow: 1px 1px 1px rgba(150, 150, 150, 1);
+	/* text-shadow: 1px 1px 1px rgba(150, 150, 150, 1); */
 }
 
 @media only screen and (min-width: 768px) {
@@ -103,8 +103,13 @@ article{
 
 .post-date {
 	text-transform: uppercase;
-	font-size: 14px;
+	font-size: 10px;
 	letter-spacing: 3px;
+}
+
+.post-title {
+	font-size: 22px;
+	margin-top: 0.7rem;
 }
 
 article {
@@ -137,6 +142,12 @@ article.home h2 a:hover,
 article.home h3 a:hover,
 article.home h4 a:hover {
 	color: #e74c3c;
+}
+article.home {
+	margin-bottom: 2rem;
+}
+article.home h2 {
+	margin: 0;
 }
 
 .author .author-image {
