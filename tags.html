@@ -15,7 +15,10 @@ group: navigation
       {% capture this_word %}{{ tag_words[item] | strip_newlines }}{% endcapture %}
       <li>
           <a href="#{{ this_word | replace:' ','-' }}-ref">
-            {{ this_word }}<span class="badge pull-right">{{ site.tags[this_word].size }}</span>
+              <div class="tag-wrap">
+                <div class="tag-wrap--box">{{ this_word }}</div>
+                <div class="tag-wrap--box"><span class="badge">{{ site.tags[this_word].size }}</span></div>
+              </div>
          </a>
       </li>
    {% endunless %}{% endfor %}

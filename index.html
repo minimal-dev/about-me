@@ -3,12 +3,12 @@ layout: page
 tagline:
 ---
 
-{% for post in paginator.posts %}
+{% for post in site.posts %}
 
 <article class="home">
 
   <span class="post-date">
-    {% assign d = post.date | date: "%d" | plus:'0' %}
+    <!-- {% assign d = post.date | date: "%d" | plus:'0' %}
     {{ post.date | date: "%B" }}
     {% case d %}
     {% when 1 or 21 or 31 %}{{ d }}st,
@@ -16,7 +16,17 @@ tagline:
     {% when 3 or 23 %}{{ d }}rd,
     {% else %}{{ d }}th,
     {% endcase %}
-    {{ post.date | date: "%Y" }}
+    {{ post.date | date: "%Y" }} -->
+    {{ post.date | date: "%Y-%m-%d" }}
+  </span>
+  <span class="post-tags">
+    {% if post.tags.size > 0 %}
+      {% for tag in post.tags %}
+        <a href="{{ site.BASE_PATH }}/{{ site.tags_path }}#{{ tag }}-ref">
+          #{{ tag }}
+        </a>
+      {% endfor %}
+    {% endif %}
   </span>
 
   <h2 class="post-title">
@@ -41,7 +51,7 @@ tagline:
 {% endfor %}
 <hr/>
 
-<ul class="pager"> 
+<!-- <ul class="pager"> 
 
   {% if paginator.previous_page %}
   <li class="previous">
@@ -71,4 +81,4 @@ tagline:
   </li>
   {% endif %}
 
-</ul>
+</ul> -->
