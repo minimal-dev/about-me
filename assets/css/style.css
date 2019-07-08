@@ -250,7 +250,7 @@ footer {
 }
 
 .nav-tabs-vertical > li > a {
-  line-height: 2;
+  line-height: 1.428571429;
   border: 1px solid transparent;
   border-radius: 4px 0 0 4px;
 }
